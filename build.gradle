@@ -27,3 +27,12 @@ task clean(type: Delete) {
 }
 
 apply from: rootProject.file('dependencies.gradle')
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+dependencies {
+		implementation 'com.github.User:Repo:Tag'
+	}
